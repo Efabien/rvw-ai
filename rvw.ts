@@ -5,7 +5,6 @@ const run = async () => {
   try {
     const [filePath] = Deno.args;
     const requestBody = await buidldRequestBody(filePath);
-    console.log(requestBody);
     const response = await call(requestBody);
     readResponse(response);
     
